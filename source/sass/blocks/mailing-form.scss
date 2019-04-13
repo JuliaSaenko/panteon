@@ -1,0 +1,47 @@
+.mailing-form {
+  padding: 45px 30px 55px;
+  background-color: $dark-blue-background;
+  background-image: url("../img/form-bg-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mailing-form__description {
+  @include no-indent;
+  display: block;
+  margin-bottom: 25px;
+  font-size: 23px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $white;
+}
+
+.mailing-form__element {
+  @include no-indent;
+  margin-bottom: 30px;
+}
+
+.mailing-form__input {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+  border: none;
+  border-bottom: $form-border;
+  outline: none;
+  resize: none;
+  background: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .mailing-form {
+    background-image: url("../img/form-bg-tablet@1x.jpg");
+  }
+
+  .mailing-form__button {
+    margin-left: 20px;
+  }
+}

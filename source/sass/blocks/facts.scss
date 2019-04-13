@@ -1,0 +1,118 @@
+.facts__numbers {
+  padding: 15px 0;
+  background-color: $pink-background;
+}
+
+.facts__list {
+  @include simple-list;
+  @include mobile-container;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.facts__item {
+  margin-bottom: 25px;
+  width: 50%;
+  text-align: center;
+}
+
+.facts__number {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.facts__text {
+  @include no-indent;
+  position: relative;
+  display: block;
+  font-size: 13px;
+  line-height: 24px;
+
+  ::after { //не работает
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 1px;
+    border-bottom: 1px solid $pink-text-color;
+  }
+}
+
+.facts__title {
+  margin: 15px 0;
+}
+
+.facts__info {
+  @include mobile-container;
+  padding: 20px 0;
+}
+
+.facts {
+  padding-bottom: 100px;
+  background-image: url("../img/distance.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 5px left 0;
+}
+
+
+.facts__info-title {
+  @include no-indent;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black;
+}
+
+.facts__info-text {
+  font-size: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .facts {
+    padding-bottom: 150px;
+    min-height: 770px;
+    background-position: bottom 0 left 0;
+  }
+
+  .facts__list {
+    @include tablet-container;
+    padding: 25px 25px 10px;
+    justify-content: center;
+  }
+
+  .facts__item {
+    width: 140px;
+  }
+
+  .facts__item:not(:nth-child(4n)) {
+    margin-right: 35px;
+  }
+
+  .facts__info {
+    @include tablet-container;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+  }
+
+  .facts__title {
+    margin-bottom: 50px;
+  }
+
+  .facts__about,
+  .facts__distance {
+    width: 340px;
+  }
+
+  .facts__about {
+    margin-right: 25px;
+  }
+
+  .facts__info-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,201 @@
+// разобраться с блоком
+
+.realisation__wrapper {
+  @include mobile-container;
+  margin-top: 50px;
+
+  &--full {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.realisation__article {
+  margin-bottom: 40px;
+}
+
+.realisation__title {
+  @include no-indent;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 36px;
+
+  &--white {
+    padding-top: 164px;
+    font-size: 24px;
+    line-height: 24px;
+    color: $white;
+  }
+}
+
+.realisation__article-title {
+  @include no-indent;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: $black;
+}
+
+.realisation__text {
+  @include no-indent;
+  margin-bottom: 20px;
+
+  &--white {
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+  }
+}
+
+.realisation__image-block {
+  position: relative;
+  margin: 50px 0 20px 70px;
+  width: 165px;
+  height: 190px;
+  text-align: center;
+  border: 10px solid $accent-text-color;
+}
+
+.realisation__image {
+  position: absolute;
+  top: 35px;
+  left: -35px;
+
+  &--rocket {
+    position: absolute;
+    top: -144px;
+    left: 15px;
+  }
+}
+
+.realisation__cite {
+  position: relative;
+  display: block;
+  margin: 40px 0;
+  padding-top: 30px;
+  font-size: 18px;
+  color: $accent-text-color;
+  background-image: url("../img/quotes.svg");
+  background-position: top -20px left 0;
+  background-repeat: no-repeat;
+}
+
+
+.realisation__offer {
+  &--crimson {
+    position: relative;
+    display: block;
+    margin-top: 185px;
+    padding-bottom: 15px;
+    background-color: $background-purple;
+    background-image: url("../img/rocket-bg-mobile@1x.jpg");
+    background-position: top -20px left 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.realisation__cost {
+  @include no-indent;
+  margin-bottom: 15px;
+}
+
+.realisation__sum {
+  @include no-indent;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 60px;
+  line-height: 60px;
+  color: $white;
+}
+
+.realisation__up-text {
+  @include no-indent;
+  font-size: 24px;
+  line-height: 24px;
+  color: $white;
+}
+
+.realisation__button {
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .realisation {
+    margin-bottom: 50px;
+  }
+
+  .realisation__wrapper {
+    @include tablet-container;
+    position: relative;
+    padding: 25px;
+    padding-top: 75px;
+
+    &--full {
+      padding: 25px;
+    }
+
+    &--crimson {
+      margin: 0 auto;
+      padding: 15px;
+      width: 700px;
+    }
+  }
+
+  .realisation__title {
+    margin-bottom: 50px;
+    font-size: 50px;
+    line-height: 50px;
+
+    &--white {
+      margin-bottom: 25px;
+      padding-top: 0;
+      margin-left: 340px;
+      width: 320px;
+    }
+  }
+
+  .realisation__article-title {
+    margin-bottom: 35px;
+  }
+
+  .realisation__image-block {
+    float: right;
+  }
+
+  .realisation__cite {
+    background-position: top -10px left 15px;
+  }
+
+  .realisation__offer {
+    margin: 0;
+    margin-top: 50px;
+
+    &--crimson {
+      background-image: url("../img/rocket-bg-tablet@1x.jpg");
+      background-position: top 0 left 0;
+      background-size: cover;
+    }
+  }
+
+  .realisation__image {
+    top: -45px;
+  }
+
+  .realisation__text {
+    &--white {
+      margin-left: 340px;
+      width: 320px;
+    }
+  }
+
+  .realisation__button {
+    position: absolute;
+    right: 120px;
+    bottom: 35px;
+  }
+
+  .realisation__cost {
+    margin-left: 50px;
+    width: 600px;
+  }
+}

@@ -1,0 +1,139 @@
+.page-header {
+  text-align: center;
+  background-color: $background-purple;
+}
+
+.page-header__wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  width: 320px;
+  background-image: url("../img/mainbg-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.page-header__intro {
+  @include mobile-container;
+  padding: 50px 15px 0;
+  text-align: center;
+}
+
+.page-header__title {
+  @include no-indent;
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: 300;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+}
+
+.page-header__accent {
+  font-weight: 400;
+}
+
+.page-header__main-accent {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.page-header__description {
+  @include no-indent;
+  z-index: 2;
+  margin: -15px 0 10px 100px;
+  width: 120px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $pink-text-color;
+  text-align: left;
+}
+
+.page-header__player {
+  z-index: 1;
+  position: relative;
+  opacity: 30%;
+}
+
+.page-header__play-button {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+
+  width: 53px;
+  height: 53px;
+
+  background-color: transparent;
+  background-image: url("../img/play-button.svg");
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.page-header__down-button {
+  margin: 25px auto 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    @include tablet-container;
+    padding: 10px;
+    background-image: url("../img/mainbg-tablet@1x.jpg");
+  }
+
+  .page-header__intro {
+    position: relative;
+    width: auto;
+    padding: 180px 0 50px;
+    text-align: center;
+  }
+
+  .page-header__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .page-header__accent {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .page-header__main-accent {
+    font-size: 157px;
+    line-height: 157px;
+  }
+
+  .page-header__player {
+    position: relative;
+  }
+
+  .page-header__video {
+    width: 516px;
+    height: 260;
+    opacity: 0.8;
+  }
+
+  .page-header__play-button {
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+  }
+
+  .page-header__description {
+    position: absolute;
+    bottom: -35px;
+    right: 155px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .page-header__down-button {
+    width: 70px;
+    height: 70px;
+  }
+}
