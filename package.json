@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.3",
+    "deep-extend": "^0.6.0",
     "gulp": "^4.0.0",
     "gulp-htmlmin": "^5.0.1",
     "merge": "^1.2.1"
